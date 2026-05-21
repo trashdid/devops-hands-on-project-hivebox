@@ -52,4 +52,20 @@ Here is a pre-start checklist:
 
 ## Implementation
 
-** ADD YOUR IMPLEMENTATION DOCUMENTATION HERE **
+### Build Docker Image
+In order to build the docker image correctly, you need to ensure that bash is installed on your machine, and you have 
+cloned the repo from the source. In the terminal of your choice, navigate to the project repo, then run the command:
+```shell
+build.sh
+```
+
+### Running the Docker Image
+```shell
+docker run project-hivebox
+```
+or
+```shell
+docker run project-hivebox:latest
+```
+
+This will allow you to run the latest version of the code in 2 lines.
