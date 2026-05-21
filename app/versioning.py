@@ -1,3 +1,5 @@
+import os
 
 def get_current_version() -> str:
-    return "v0.0.1"
+    current_version: str = str(os.getenv('APP_VERSION'))
+    return current_version
