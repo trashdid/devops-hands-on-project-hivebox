@@ -1,0 +1,9 @@
+FROM python:3.14.5-alpine3.23
+WORKDIR /app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY /app ./
+
+CMD ["python", "main.py"]
