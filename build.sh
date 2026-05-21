@@ -8,7 +8,8 @@ if git describe --exact-match --tags --match "v[0-9]*.[0-9]*.[0-9]*" HEAD >/dev/
 else
   VERSION="${BASE_VERSION}-dev"
 fi
+DOCKER_TAGS=("-t" "project-hivebox:$VERSION" "-t" "project-hivebox:latest")
 
 export VERSION
 
-docker build . --build-arg APP_VERSION="$VERSION" -t project-hivebox:"$VERSION"
+docker build . --build-arg APP_VERSION="$VERSION" "${DOCKER_TAGS[@]}"
